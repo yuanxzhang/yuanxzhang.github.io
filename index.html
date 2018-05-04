@@ -34,6 +34,27 @@
         margin-bottom: 10px;
     }
 
+    #pub {
+        font-family: helvetica;
+    }
+
+    #pub li {
+        margin-bottom: 15px;
+    }
+
+    #pub li div {
+        margin-bottom: 5px;
+    }
+
+    #pub li .title {
+        color: #333;
+        font-weight: bold;
+    }
+
+    #pub li .author {
+        font-style: italic;
+    }
+
     #tracker {
         text-align: center;
         margin: 10px auto;
@@ -70,9 +91,9 @@
                 especially on Android security, static code analysis, managed runtime.
                 Currently, he co-directs the System Software and Security Laboratory in Fudan University.
             </p>
-            <p><small>
+            <p style="font-size: 90%;">
                 <i><b>To prospective students/postdoctors. </b> If you want to work with me to tackle cutting-edge system security problems, 
-                    please feel free to drop me an email.</i></small>
+                    please feel free to drop me an email.</i>
             </p>
 
             <table cellspacing=4 cellpadding=4 font face="arial">
@@ -86,65 +107,100 @@
 
             <hr size=2>
             <h3><a name="background">Background</a></h3>
-            <p>
+            <div>
                 <ul>
                     <li>2017.12~now, Fudan University, School of Computer Science, Associate Professor</li>
                     <li>2014.07~2017.11, Fudan University, School of Computer Science, Assistant Professor</li>
                     <li>2009.09~2014.06, Fudan University, School of Computer Science, Ph.D</li>
                     <li>2005.09~2009.06, Nanjing University, Software Institute, B.Eng</li>
                 </ul>
-            </p>
+            </div>
 
             <hr size=2>
             <h3><a name="publications">Publications</a></h3>
-            <p id="pub">
+            <div id="pub">
                 <ol>
-                    <li>Yuan Zhang, Jiarun Dai, Xiaohan Zhang, Sirong Huang, Zhemin Yang, Min Yang, Hao Chen.
-                        Detecting Third-Party Libraries in Android Applications with High Precision and Recall.
-                        In Proceedings of IEEE International Conference on Software Analysis, Evolution and Reengineering, SANER’18, Campobasso, Italy, March 20-23, 2018. 
-                        <a href="./paper/libpecker-saner2018.pdf">[PDF]</a></li>
-                    <li>Yuhong Nan, Zhemin Yang, Xiaofeng Wang, Yuan Zhang, Donglai Zhu, Min Yang.
-                        Finding Clues for Your Secrets: Semantics-Driven, Learning-Based Privacy Discovery in Mobile Apps.
-                        In Proceedings of Network and Distributed System Security Symposium, NDSS’18, San Diego, Feb 18-21, 2018.
-                        <a href="./paper/cluefinder-ndss2018.pdf">[PDF]</a></li>
-                    <li>Yuhong Nan, Zhemin Yang, Min Yang, Shunfan Zhou, Yuan Zhang, Guofei Gu, Xiaofeng Wang, Limin Sun.
-                        Identifying User-Input Privacy in Mobile Applications at a Large Scale.
-                        In IEEE Transactions on Information Forensics and Security(TIFS), 2017, 12(3), 647-661.
-                        <a href="./paper/uipicker-tifs.pdf">[PDF]</a></li>
-                    <li>Yuan Zhang, Min Yang, Guofei Gu, Hao Chen.
-                        Rethinking Permission Enforcement Mechanism on Mobile Systems.
-                        In IEEE Transactions on Information Forensics and Security(TIFS), 2016, 9(11), 1828-1842.
-                        <a href="./paper/finedroid-tifs.pdf">[PDF]</a></li>
-                    <li>Yuan Zhang, Min Yang, Guofei Gu, Hao Chen.
-                        FineDroid: Enforcing Permissions with System-wide Application Execution Context.
-                        In Proceedings of the 11th EAI International Conference on Security and Privacy in Communication Networks, SecureComm’15, Dallas, TX, October 26-29, 2015.
-                        <a href="./paper/finedroid-securecomm2015.pdf">[PDF]</a></li>
-                    <li>Fangda Cai, Hao Chen, Yuanyi Wu, Yuan Zhang.
-                        AppCracker: Widespread Vulnerabilities in User and Session Authentication in Mobile Apps.
-                        In Proceedings of 4th IEEE Mobile Security Technologies (co-located with IEEE S&P), MoST’15, San Jose, CA, May 21, 2015.
-                        <a href="./paper/appcracker-most2015.pdf">[PDF]</a></li>
-                    <li>Yuan Zhang, Min Yang, Zhemin Yang, Guofei Gu, Peng Ning, Binyu Zang.
-                        Permission Use Analysis for Vetting Undesirable Behaviors in Android Apps.
-                        In IEEE Transactions on Information Forensics and Security(TIFS), 2014, 9(11), 1828-1842.
-                        <a href="./paper/vetdroid-tifs.pdf">[PDF]</a></li>
-                    <li>Zhemin Yang, Min Yang, Yuan Zhang, Guofei Gu, Peng Ning and X. Sean Wang.
-                        AppIntent: Analyzing Sensitive Data Transmission in Android for Privacy Leakage Detection.
-                        In Proceedings of the 20th ACM Conference on Computer and Communications Security, CCS’13, Berlin, Germany, November 4-8, 2013.
-                        <a href="./paper/appintent-ccs2013.pdf">[PDF]</a></li>
-                    <li>Yuan Zhang, Min Yang, Bingquan Xu, Zhemin Yang, Guofei Gu, Peng Ning, X. Sean Wang, Binyu Zang.
-                        Vetting Undesirable Behaviors in Android Apps with Permission Use Analysis.
-                        In Proceedings of the 20th ACM Conference on Computer and Communications Security, CCS’13, Berlin, Germany, November 4-8, 2013.
-                        <a href="./paper/vetdroid-ccs2013.pdf">[PDF]</a></li>
-                    <li>Yuan Zhang, Min Yang, Bo Zhou, Zhemin Yang, Weihua Zhang, Binyu Zang.
-                        Swift: A Registerbased JIT Compiler for Embedded JVMs.
-                        In Proceedings of the 8th international conference on Virtual execution environments, VEE’12, London, UK, March 3-4, 2012.
-                        <a href="./paper/swift-vee2012.pdf">[PDF]</a></li>
+                    <li>
+                        <div class="title">An Empirical Study of Web Resource Manipulation in Real-world Mobile Applications.</div>
+                        <div class="author">Xiaohan Zhang, <span>Yuan Zhang</span>, Qianqian Mo, Hao Xia, Zhemin Yang, Min Yang, Xiaofeng Wang, Long Lu, Haixin Duan.</div>
+                        <div class="venue">In Proceedings of the 27th USENIX Security Symposium, Security’18, Baltimore, USA, Augues 15-17, 2018. (to appear)</div>
+                    </li>
+                    <li>
+                        <div class="title">Detecting Third-Party Libraries in Android Applications with High Precision and Recall.</div>
+                        <div class="author">Yuan Zhang, Jiarun Dai, Xiaohan Zhang, Sirong Huang, Zhemin Yang, Min Yang, Hao Chen.</div>
+                        <div class="venue">In Proceedings of IEEE International Conference on Software Analysis, Evolution and Reengineering, SANER’18, Campobasso, Italy, March 20-23, 2018. 
+                            <a href="./paper/libpecker-saner2018.pdf">[PDF]</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">Finding Clues for Your Secrets: Semantics-Driven, Learning-Based Privacy Discovery in Mobile Apps.</div>
+                        <div class="author">Yuhong Nan, Zhemin Yang, Xiaofeng Wang, Yuan Zhang, Donglai Zhu, Min Yang.</div>
+                        <div class="venue">In Proceedings of Network and Distributed System Security Symposium, NDSS’18, San Diego, Feb 18-21, 2018.
+                            <a href="./paper/cluefinder-ndss2018.pdf">[PDF]</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">Identifying User-Input Privacy in Mobile Applications at a Large Scale.</div>
+                        <div class="author">Yuhong Nan, Zhemin Yang, Min Yang, Shunfan Zhou, Yuan Zhang, Guofei Gu, Xiaofeng Wang, Limin Sun.</div>
+                        <div class="venue">In IEEE Transactions on Information Forensics and Security(TIFS), 2017, 12(3), 647-661.
+                            <a href="./paper/uipicker-tifs.pdf">[PDF]</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">Rethinking Permission Enforcement Mechanism on Mobile Systems.</div>
+                        <div class="author">Yuan Zhang, Min Yang, Guofei Gu, Hao Chen.</div>
+                        <div class="venue">In IEEE Transactions on Information Forensics and Security(TIFS), 2016, 9(11), 1828-1842.
+                            <a href="./paper/finedroid-tifs.pdf">[PDF]</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">FineDroid: Enforcing Permissions with System-wide Application Execution Context.</div>
+                        <div class="author">Yuan Zhang, Min Yang, Guofei Gu, Hao Chen.</div>
+                        <div class="venue">In Proceedings of the 11th EAI International Conference on Security and Privacy in Communication Networks, SecureComm’15, Dallas, TX, October 26-29, 2015.
+                            <a href="./paper/finedroid-securecomm2015.pdf">[PDF]</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">AppCracker: Widespread Vulnerabilities in User and Session Authentication in Mobile Apps.</div>
+                        <div class="author">Fangda Cai, Hao Chen, Yuanyi Wu, Yuan Zhang.</div>
+                        <div class="venue">In Proceedings of 4th IEEE Mobile Security Technologies (co-located with IEEE S&P), MoST’15, San Jose, CA, May 21, 2015.
+                            <a href="./paper/appcracker-most2015.pdf">[PDF]</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">Permission Use Analysis for Vetting Undesirable Behaviors in Android Apps.</div>
+                        <div class="author">Yuan Zhang, Min Yang, Zhemin Yang, Guofei Gu, Peng Ning, Binyu Zang.</div>
+                        <div class="venue">In IEEE Transactions on Information Forensics and Security(TIFS), 2014, 9(11), 1828-1842.
+                            <a href="./paper/vetdroid-tifs.pdf">[PDF]</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">AppIntent: Analyzing Sensitive Data Transmission in Android for Privacy Leakage Detection.</div>
+                        <div class="author">Zhemin Yang, Min Yang, Yuan Zhang, Guofei Gu, Peng Ning and X. Sean Wang.</div>
+                        <div class="venue">In Proceedings of the 20th ACM Conference on Computer and Communications Security, CCS’13, Berlin, Germany, November 4-8, 2013.
+                            <a href="./paper/appintent-ccs2013.pdf">[PDF]</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">Vetting Undesirable Behaviors in Android Apps with Permission Use Analysis.</div>
+                        <div class="author">Yuan Zhang, Min Yang, Bingquan Xu, Zhemin Yang, Guofei Gu, Peng Ning, X. Sean Wang, Binyu Zang.</div>
+                        <div class="venue">In Proceedings of the 20th ACM Conference on Computer and Communications Security, CCS’13, Berlin, Germany, November 4-8, 2013.
+                            <a href="./paper/vetdroid-ccs2013.pdf">[PDF]</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">Swift: A Registerbased JIT Compiler for Embedded JVMs.</div>
+                        <div class="author">Yuan Zhang, Min Yang, Bo Zhou, Zhemin Yang, Weihua Zhang, Binyu Zang.</div>
+                        <div class="venue">In Proceedings of the 8th international conference on Virtual execution environments, VEE’12, London, UK, March 3-4, 2012.
+                            <a href="./paper/swift-vee2012.pdf">[PDF]</a>
+                        </div>
+                    </li>
                 </ol>
-            </p>
+            </div>
 
             <hr size=2>
             <h3><a name="teaching">Teaching</a></h3>
-            <p>Undergraduate level:<br>
+            <div>Undergraduate level:<br>
                 <ul>
                     <li> System Security: Attacks & Defenses <i>(in School of Software)</i>
                         <ul><li><i>Fall 2016, Fall 2017</i></li></ul>
@@ -156,26 +212,26 @@
                         <ul><li><i>Spring 2018</i></li></ul>
                     </li>
                 </ul>
-            </p>
+            </div>
 
-            <p>Graduate level:<br>
+            <div>Graduate level:<br>
                 <ul>
                     <li> Computer Network Security <i>(in School of Software)</i>
                         <ul><li><i>Spring 2016, Spring 2017, Spring 2018</i></li></ul>
                     </li>
                 </ul>
-            </p>
+            </div>
 
             <hr size=2>
             <h3><a name="activities">Activities</a></h3>
-            <p>
+            <div>
                 Journal Reviewer for <i>IEEE Transactions on Information Forensics and Security,
                 IEEE Transactions on Mobile Computing, ACM Transactions on Information Systems,
                 Computer & Security, SCIENCE CHINA Information Sciences</i>.
-            </p>
-            <p>
+            </div>
+            <div>
                 Conference Reviewer for <i>NDSS, ACSAC, AsiaCCS, SecureComm, RAID, WiSec, SPSM</i>.
-            </p>
+            </div>
 
             <br>
             <center><small>Last Modified: March 13, 2018, Contact: yuanxzhang [AT] fudan.edu.cn</small></center>
