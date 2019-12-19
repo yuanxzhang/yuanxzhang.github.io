@@ -71,9 +71,26 @@
 	}
 	.banner{
 		background: #4169E1;
-		position:relative;
+		position:absolute;
 		min-height:56px;
 		padding:0 8px;
+		left:0;
+		top:0;
+		right:0;
+	}
+	.content{
+		top: 56px;
+	    position: absolute;
+	    overflow-y: scroll;
+	    bottom: 0;
+	}
+	@media screen and (max-width: 889px){
+		.content{
+			top: 112px;
+		    position: absolute;
+		    overflow-y: scroll;
+		    bottom: 0;
+		}
 	}
 	.banner .wrapper{
 		width:90%;
@@ -139,6 +156,22 @@
 	}
 
     @media screen and (max-width: 570px) {
+		.banner{
+			background: #4169E1;
+			position:absolute;
+			min-height:56px;
+			padding:0 8px;
+			left:0;
+			top:0;
+			right:0;
+			z-index:999;
+		}
+		.content{
+			top: 56px;
+		    position: absolute;
+		    overflow-y: scroll;
+		    bottom: 0;
+		}
         .nav-wrapper {
             position: absolute;
             top: 10px;
@@ -191,7 +224,7 @@
 </div> -->
 <div class="banner">
     <div class="wrapper">
-        <a class="site-title" href="/">Yuan Zhang</a>
+        <a class="site-title" href="#">Yuan Zhang</a>
         <div class="nav-wrapper">
             <input type="checkbox" id="inputMenu" style="display: none"/>
             <label class="menu-icon" for="inputMenu">
@@ -215,7 +248,7 @@
         </div>
     </div>
 </div>
-<div style="width:100%;">
+<div style="width:100%;" class="content">
         <div style="max-width:800px;width:90%;margin:8px auto;">
             <br>
 			<p class="avatar-wrapper">
@@ -479,7 +512,7 @@
             </div>
 
             <br>
-            <center><small>Last Modified: December 14, 2019, Contact: yuanxzhang [AT] fudan.edu.cn</small></center>
+            <center><small>Last Modified: December 19, 2019, Contact: yuanxzhang [AT] fudan.edu.cn</small></center>
 
             <div id="tracker">
                     <a href="https://clustrmaps.com/site/1a417"  title="Visit tracker">
