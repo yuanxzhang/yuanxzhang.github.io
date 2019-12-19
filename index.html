@@ -5,7 +5,7 @@
 <meta name="description" content="Yuan Zhang">
 <meta name="keywords" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<link rel="stylesheet" href="photo.css" type="text/css"/>
 <style>
     A {
         text-decoration: none
@@ -13,6 +13,7 @@
 
     body {
         font: 100% Verdana, Arial, Helvetica, sans-serif;
+	    font-family: "Helvetica Neue";
         background-color: #FFFFFF;
         list-style: blue4;
         vlink: #0000ff;
@@ -60,43 +61,199 @@
         margin: 10px auto;
         /* widows: 50px; */
     }
+	
+	p {
+	    display: block;
+	    margin-block-start: 1em;
+	    margin-block-end: 1em;
+	    margin-inline-start: 0px;
+	    margin-inline-end: 0px;
+	}
+	.banner{
+		background: #4169E1;
+		position:relative;
+		min-height:56px;
+		padding:0 8px;
+	}
+	.banner .wrapper{
+		width:90%;
+		max-width:800px;
+		margin: 0 auto;
+	}
+	.banner::after{
+		content: "";
+	    display: table;
+	    clear: both;
+	}
+	.banner a{
+		color:white;
+		margin-right:20px;
+	}
+	
+    .site-title {
+        font-size: 1.625rem;
+        font-weight: 400;
+        line-height: 54px;
+        margin-bottom: 0;
+        float: left;
+	    margin-left: 0;
+        font-family: "Helvetica Neue";
+    }
+
+    .nav-wrapper {
+        float: right;
+        line-height: 54px;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+	@media screen and (max-width: 889px){
+	    .site-title {
+	        font-size: 1.625rem;
+	        font-weight: 400;
+	        line-height: 54px;
+	        margin-bottom: 0;
+	        float: left;
+        	margin-left: -5px;
+	        font-family: "Helvetica Neue";
+	    }
+	}
+	
+	.avatar-size{
+		width:337px;height:300px;max-width:100%;margin:10px;
+	}
+	
+	.avatar-wrapper{
+		float:right;padding:0 10px;
+	}
+	
+	@media screen and (max-width: 512px) {
+		.avatar-size{
+			width:100vw;height:calc(89vw - 20px);margin:0px;
+		}
+		.avatar-wrapper{
+			float:right;padding:0;
+		}
+	}
+
+    @media screen and (max-width: 570px) {
+        .nav-wrapper {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            text-align: right;
+            background-color: #424242;
+        }
+
+        .menu-icon {
+            display: block;
+        }
+
+        .menu-span {
+            top: 10px;
+            position: relative;
+            background: #424242;
+            text-align: center;
+            padding: 9px;
+            line-height: 0;
+        }
+
+        #inputMenu:checked ~ .nav {
+            display: block;
+            width: 138px;
+            padding-bottom: 5px;
+            padding-top: 22px;
+        }
+
+        .nav {
+            display: none;
+        }
+    }
 </style>
 </head>
 
 <body>
 <!-- <script type="text/javascript" id="clustrmaps" src="http://cdn.clustrmaps.com/map_v2.js?d=lplNOM8Srknxk2Rdb7zm-qrXmm8SrZkvyeNgEfmfZAU&cl=ffffff&w=a"></script>     -->
-<table width="100%" cellpadding=0>
-    <tr>
-        <td width="15%" bgcolor="lightgray"></td>
-        <td width="5%" bgcolor="white"></td>
-        <td width="60%">
+<!-- <div class="banner">
+	<div class="wrapper">
+		<a class="site-title" href="/">Yuan Zhang</a>
+		<nav style="float:right;line-height:54px;">
+			<div>
+				<a href="#background">background</a>
+				<a href="#publications">publications</a>	
+				<a href="#teaching">teaching</a>
+				<a href="#activities">activities</a>
+			</div>
+		</nav>
+	</div>
+</div> -->
+<div class="banner">
+    <div class="wrapper">
+        <a class="site-title" href="/">Yuan Zhang</a>
+        <div class="nav-wrapper">
+            <input type="checkbox" id="inputMenu" style="display: none"/>
+            <label class="menu-icon" for="inputMenu">
+                <span class="menu-span">
+                <svg viewBox="0 0 18 15" width="18px" height="15px">
+                    <path fill="#ffffff"
+                          d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"></path>
+                    <path fill="#ffffff"
+                          d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"></path>
+                    <path fill="#ffffff"
+                          d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"></path>
+                </svg>
+                </span>
+            </label>
+            <nav class="nav">
+                <a href="#background">background</a>
+                <a href="#publications">publications</a>
+                <a href="#teaching">teaching</a>
+                <a href="#services">services</a>
+            </nav>
+        </div>
+    </div>
+</div>
+<div style="width:100%;">
+        <div style="max-width:800px;width:90%;margin:8px auto;">
             <br>
-            <h2><b>Yuan Zhang</b></h2>
-            <i>Associate Professor, Ph.D</i><br>
-            <i>School of Computer Science, Fudan University</i>
-            <i></i><br>
-            <small><a href="https://scholar.google.com/citations?user=ZEgzyZcAAAAJ">Google Scholar Profile</a></small>
-            <br><br>
+			<p class="avatar-wrapper">
+				<img class="avatar-bg avatar-size" style="padding:auto;vertical-align: middle;border:1px;background-size: 100% 100%;"/>
+			</p>
+            <!--p>
+    			<h2><b>Yuan Zhang</b></h2>
+                <i>Associate Professor, Ph.D</i><br>
+                <i>School of Computer Science, Fudan University</i>
+                <i></i><br>
+                <small><a href="https://scholar.google.com/citations?user=ZEgzyZcAAAAJ">Google Scholar Profile</a></small>
+                <br>
+			</p-->
+            <p>
+                I am an Associate Professor in the <a href="http://www.cs.fudan.edu.cn/">School of Computer Science</a> of <a href="http://www.fudan.edu.cn/">Fudan University</a>. 
+                I co-direct the System Software and Security Laboratory of Fudan University.
+                I am also the co-founder and the coach of a great CTF Team in Fudan University, named <a href="https://ctftime.org/team/57907">Whitzard</a>. 
+                We took part in many great world-wide CTF competitions and won good places.
+            </p>
+            <p>
+                I earned my Ph.D degree in Computer Science from Fudan University in 2014,
+                and my Bachelor degree in Software Engineering from Nanjing University in 2009.
+            </p>
+            <p>
+                My research interests span all areas in system security and software analysis,
+                especially on Android security, static code analysis, managed runtime.
+            </p>
+            <p style="font-size: 90%;">
+                <i><b>To prospective students/postdoctors.</b> If you want to work with me to tackle cutting-edge system security problems, 
+                    please feel free to drop me an email.</i>
+            </p>
             <p style="font-family: Courier New">
                 <b>Email:</b> yuanxzhang [AT] fudan.edu.cn <br>
                 <b>Office:</b> Room 313, Software Building, NO. 825 Zhangheng Road, Shanghai
             </p>
 
-            <p>
-                <b>Short Bio: </b> Yuan Zhang is an Associate Professor of <a href="http://www.cs.fudan.edu.cn/">School of Computer Science</a> in <a href="http://www.fudan.edu.cn/">Fudan University</a>.
-                He received his Ph.D degree from Fudan University in 2014,
-                and Bachelor degree from Nanjing University in 2009.
-            
-                His research interests span all areas in system security and software analysis,
-                especially on Android security, static code analysis, managed runtime.
-                Currently, he co-directs the System Software and Security Laboratory in Fudan University.
-            </p>
-            <p style="font-size: 90%;">
-                <i><b>To prospective students/postdoctors. </b> If you want to work with me to tackle cutting-edge system security problems, 
-                    please feel free to drop me an email.</i>
-            </p>
-
-            <table cellspacing=4 cellpadding=4 font face="arial">
+            <!-- 
+			<table cellspacing=4 cellpadding=4 font face="arial">
                 <tr>
                     <td style="font-family: arial"> <a href="#background">background</a></td><td>
                     <td style="font-family: arial"> <a href="#publications">publications</a></td><td>
@@ -104,6 +261,17 @@
                     <td style="font-family: arial"> <a href="#activities">activities</a></td>
                 </tr>
             </table>
+			-->
+            <hr size=2>
+            <h3><a name="">News</a></h3>
+            <div>
+                <ul>
+                    <li>[Dec, 2019] Paper accepted by Oakland 2020. Congrats Yuyu & Lei!</li>
+                    <li>[Dec, 2019] Paper accepted by ICSE 2020. See you in Seoul!</li>
+                    <li>[Nov, 2019] Paper accepted by USENIX Security 2020. Congrats Jiarun!</li>
+                    <li>[Nov, 2019] Join the TPC of <a href="http://esorics2020.sccs.surrey.ac.uk/">ESORICS 2020</a>. Welcome to submit!</li>
+                </ul>
+            </div>
 
             <hr size=2>
             <h3><a name="background">Background</a></h3>
@@ -121,6 +289,12 @@
             <div id="pub">
                 <ol>
                     <li>
+                        <div class="title">TextExerciser: Feedback-driven Text Input Exercising for Android Applications.</div>
+                        <div class="author">Yuyu He, Lei Zhang, Zhemin Yang, Yinzhi Cao, Keke Lian, Shuai Li, Wei Yang, Zhibo Zhang, Min Yang, Yuan Zhang, Haixin Duan.</div>
+                        <div class="venue">In Proceedings of the 41st IEEE Symposium on Security and Privacy, Oakland'20, San Francisco, CA, May 18-20, 2020 (comming soon).
+                        </div>
+                    </li>  
+                    <li>
                         <div class="title">How Android Developers Handle Evolution-induced API Compatibility Issues: A Large-scale Study.</div>
                         <div class="author">Hao Xia, Yuan Zhang, Yingtian Zhou, Xiaoting Chen, Yang Wang, Xiangyu Zhang, Shuaishuai Cui, Gen Hong, Xiaohan Zhang, Min Yang, Zhemin Yang.</div>
                         <div class="venue">In Proceedings of the 42nd International Conference on Software Engineering, ICSE'20, Seoul, South Korea, May 23-29, 2020 (comming soon).
@@ -137,6 +311,12 @@
                         <div class="author">Lei Zhang, Zhemin Yang, Yuyu He, Mingqi Li, Sen Yang, Min Yang, Yuan Zhang, Zhiun Qian.</div>
                         <div class="venue">In Proceedings of ACM SIGMETRICS / IFIP Performance 2019, Phoenix, Arizona, USA.
                                 <a href="./paper/app_virtualization_sigmetrics19.pdf">[PDF]</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="title">A Hybrid Malware Detection Approach with Feedback-directed Machine Learning.</div>
+                        <div class="author">Zhetao Li, Wenlin Li, Fuyuan Lin, Yi Sun, Min Yang, Yuan Zhang, Zhibo Wang.</div>
+                        <div class="venue">In SCIENCE CHINA Information Sciences 2018
                         </div>
                     </li>
                     <li>
@@ -239,20 +419,23 @@
             <h3><a name="teaching">Teaching</a></h3>
             <div>Undergraduate level:<br>
                 <ul>
+                    <li> Principles of Reverse Engineering <i>(in School of Computer Science)</i>
+                        <ul><li><i>Spring 2018, Spring 2019</i></li></ul>
+                    </li>
                     <li> System Security: Attacks & Defenses <i>(in School of Software)</i>
-                        <ul><li><i>Fall 2016, Fall 2017</i></li></ul>
+                        <ul><li><i>Fall 2016, Fall 2017, Fall 2018, Fall 2019</i></li></ul>
                     </li>
                     <li> Compiler Principles <i>(in School of Software)</i>
                         <ul><li><i>Fall 2017</i></li></ul>
-                    </li>
-                    <li> Principles of Reverse Engineering <i>(in School of Computer Science)</i>
-                        <ul><li><i>Spring 2018</i></li></ul>
                     </li>
                 </ul>
             </div>
 
             <div>Graduate level:<br>
                 <ul>
+                    <li> Emerging Attack & Defense Techniques <i>(in School of Software)</i>
+                        <ul><li><i>Spring 2019</i></li></ul>
+                    </li>
                     <li> Computer Network Security <i>(in School of Software)</i>
                         <ul><li><i>Spring 2016, Spring 2017, Spring 2018</i></li></ul>
                     </li>
@@ -260,31 +443,50 @@
             </div>
 
             <hr size=2>
-            <h3><a name="activities">Activities</a></h3>
-            <div>
-                Journal Reviewer for <i>IEEE Transactions on Information Forensics and Security,
-                IEEE Transactions on Mobile Computing, ACM Transactions on Information Systems,
-                Computer & Security, SCIENCE CHINA Information Sciences</i>.
+            <h3><a name="services">Services</a></h3>
+            <div>TPC Member:<br>
+                <ul>
+                    <li>ESORICS 2020</i>
+                </ul>
             </div>
-            <div>
-                Conference Reviewer for <i>NDSS, ACSAC, AsiaCCS, SecureComm, RAID, WiSec, SPSM</i>.
+            <div>Journal Reviewer:<br>
+                <ul>
+                    <li>Computer & Security 2016, 2017, 2018, 2019</li>
+                    <li>IEEE Transactions on Dependable and Secure Computing (TDSC) 2018, 2019</li>
+                    <li>Journal of Software 2016, 2017, 2018, 2019</li>
+                    <li>IEEE Transactions on Mobile Computing (TMC) 2016</li>
+                    <li>ACM Transactions on Information Systems (TOIS) 2016</li>
+                    <li>SCIENCE CHINA Information Sciences 2016</li>
+                    <li>IEEE Transactions on Information Forensics and Security (TIFS) 2015</li>
+                </ul>
+            </div>
+            <div>Sub-reviewer:<br>
+                <ul>
+                    <li>CCS 2018, 2019</li>
+                    <li>AsiaCCS 2016, 2020</li>
+                    <li>CANS 2019</li>
+                    <li>APSys 2018</li>
+                    <li>ICICS 2018</li>
+                    <li>IoT S&P 2017</li>
+                    <li>RAID 2017</li>
+                    <li>WiSec 2016</li>
+                    <li>NDSS 2015</li>
+                    <li>SPSM 2015</li>
+                    <li>SecureComm 2013, 2015</li>
+                    <li>ISC 2014</li>
+                    <li>ACSAC 2013, 2014</li>
+                </ul>
             </div>
 
             <br>
-            <center><small>Last Modified: August 8, 2018, Contact: yuanxzhang [AT] fudan.edu.cn</small></center>
+            <center><small>Last Modified: December 14, 2019, Contact: yuanxzhang [AT] fudan.edu.cn</small></center>
 
             <div id="tracker">
                     <a href="https://clustrmaps.com/site/1a417"  title="Visit tracker">
                     <img src="http://www.clustrmaps.com/map_v2.png?d=lplNOM8Srknxk2Rdb7zm-qrXmm8SrZkvyeNgEfmfZAU&cl=ffffff" /></a>
             </div>
-        </td>
-        <td width=5% bgcolor="white"></td>
-        <td width=15% bgcolor="lightgray"></td>
-
-
-    </tr>
-    
-</table>
+        </div>
+</div>
 
 
 </body>
