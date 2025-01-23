@@ -31,6 +31,11 @@
         padding: 0;
     }
 
+    .year {
+        color: #4169E1;
+        text-decoration: none;
+    }
+
     li {
         margin-bottom: 10px;
     }
@@ -212,6 +217,30 @@
 </head>
 
 <body>
+    <script type="text/javascript">
+        function showPub(year){
+            if (year.length === 0) {//show all
+                pubs = document.getElementsByClassName("pub");
+                for (var i = 0; i < pubs.length; i++) {
+                    pubs[i].style.display="list-item";
+                }
+            }
+            else {
+                pubs = document.getElementsByClassName("pub");
+                for (var i = 0; i < pubs.length; i++) {
+                    pubs[i].style.display="none";
+                }
+
+                pubs = document.getElementsByClassName(year);
+                for (var i = 0; i < pubs.length; i++) {
+                    pubs[i].style.display="list-item";
+                }
+            }
+        }
+        window.onload= function(){
+            showPub('2025');
+        }
+    </script>
 <!-- <script type="text/javascript" id="clustrmaps" src="http://cdn.clustrmaps.com/map_v2.js?d=lplNOM8Srknxk2Rdb7zm-qrXmm8SrZkvyeNgEfmfZAU&cl=ffffff&w=a"></script>     -->
 <!-- <div class="banner">
 	<div class="wrapper">
@@ -313,6 +342,8 @@
             <h3><a name="">News</a></h3>
             <div>
                 <ul>
+                    <li>[Jan, 2025] Four papers accepted by <a href="https://www.usenix.org/conference/usenixsecurity25/">USENIX Security 2025</a>. Congrats Zihan, Xinyou, Keke & Peng! <br/>  </li>
+                    <li>[Jan, 2025] One paper accepted by <a href="https://www2025.thewebconf.org/">WWW 2025</a>. Congrats Wuyuao Mai! <br/>  </li>
                     <li>[Oct, 2024] I will join the TPC of <a href="https://www.codaspy.org/2025/cfp.html">ACM CODASPY 2025</a>. Welcome to submit!</li>
                     <li>[Oct, 2024] I will join the TPC of <a href="https://www.sigsac.org/ccs/CCS2025/">ACM CCS 2025</a>. Welcome to submit!</li>
                     <li>[Oct, 2024] I will join the TPC of <a href="https://www2025.thewebconf.org/research-tracks">WWW 2025</a> (Security and privacy track). Welcome to submit!</li>
@@ -328,11 +359,11 @@
                     <li>[May, 2024] Invited to join the Editorial Board of <a href="https://cybersecurity.springeropen.com/">Cybersecurity.</a> Welcome to submit!</li>
                     <li>[April, 2024] Invited to join the Editorial Board of <a href="https://mc.manuscriptcentral.com/tops">ACM Transactions on Security and Privacy (TOPS).</a> Welcome to submit!</li>
                     <li>[April, 2024] One paper accepted by <a href="https://2024.esec-fse.org/track/fse-2024-industry">FSE 2024 (Industry)</a>. Congrats Kangzheng! <br/>  </li>
-                    <li>[Jan, 2024] Two papers accepted by <a href="https://www2024.thewebconf.org/">WWW 2024</a>. Congrats Guoyi & Youkun! <br/>  </li>
+                    <!-- <li>[Jan, 2024] Two papers accepted by <a href="https://www2024.thewebconf.org/">WWW 2024</a>. Congrats Guoyi & Youkun! <br/>  </li>
                     <li>[Jan, 2024] One paper accepted by <a href="https://conf.researchr.org/home/fse-2024">FSE 2024</a>. Congrats Keke! <br/>  </li>
                     <li>[Dec, 2023] I will join the TPC of <a href="https://www.sigsac.org/ccs/CCS2024/home.html">ACM CCS 2024</a>. Welcome to submit!</li>
                     <li>[Dec, 2023] One paper accepted by <a href="https://sp2024.ieee-security.org/">IEEE S&P 2024</a>. Congrats Bofei! <br/>  </li>
-                    <li>[Dec, 2023] One paper accepted by <a href="https://infocom2024.ieee-infocom.org/">INFOCOMM 2024</a>. Congrats Kaizheng! <br/>  </li>
+                    <li>[Dec, 2023] One paper accepted by <a href="https://infocom2024.ieee-infocom.org/">INFOCOMM 2024</a>. Congrats Kaizheng! <br/>  </li> -->
                     <!-- <li>[Sept, 2023] I will join the TPC of <a href="http://www.codaspy.org/2024/cfp.html">CODASPY 2024</a>. Welcome to submit!</li>
                     <li>[Aug, 2023] One paper accepted by <a href="https://conf.researchr.org/home/icse-2024">ICSE 2024</a>. Congrats Jiarun! <br/>  </li>
                     <li>[Aug, 2023] Two papers accepted by <a href="https://www.sigsac.org/ccs/CCS2023/">CCS 2023</a>. Congrats Peng & Xin! <br/>  </li> -->
@@ -411,31 +442,74 @@
             </div>
 
             <hr size=2>
-            <h3><a name="publications">Publications</a></h3>
+            <h3><a name="publications">Publications </a>
+                <a class="year" href="javascript:showPub('2025');">( 25 /</a>
+                <a class="year" href="javascript:showPub('2024');">24 /</a>
+                <a class="year" href="javascript:showPub('2023');">23 /</a>
+                <a class="year" href="javascript:showPub('2022');">22 /</a>
+                <a class="year" href="javascript:showPub('2021');">21 /</a>
+                <a class="year" href="javascript:showPub('2020');">20 /</a>
+                <a class="year" href="javascript:showPub('');">all )</a>
+            </h3>
             <div id="pub">
                 <ol>
-                    <li>
+                    <li class="pub 2025">
+                        <div class="title">Effective Directed Fuzzing with Hierarchical Scheduling for Web Vulnerability Detection. </div>
+                        <div class="author">Zihan Lin, Yuan Zhang, Jiarun Dai, Xinyou Huang, Bocheng Xiang, Guangliang Yang, Letian Yuan, Lei Zhang, Fengyu Liu, Tian Chen, Min Yang. </div>
+                        <div class="venue">In Proceedings of the 34th USENIX Security Symposium (USENIX Security), Seattle, WA, USA, August 13-15, 2025
+                            (to appear).
+                        </div>
+                    </li>
+                    <li class="pub 2025">
+                        <div class="title">Towards Automatic Detection and Exploitation of Java Web Application Vulnerabilities via Concolic Execution guided by Cross-thread Object Manipulation. </div>
+                        <div class="author">Xinyou Huang, Lei Zhang, Yongheng Liu, Peng Deng, Yinzhi Cao, Yuan Zhang, Min Yang. </div>
+                        <div class="venue">In Proceedings of the 34th USENIX Security Symposium (USENIX Security), Seattle, WA, USA, August 13-15, 2025
+                            (to appear).
+                        </div>
+                    </li>
+                    <li class="pub 2025">
+                        <div class="title">Careless Retention and Management: Understanding and Detecting Data Retention Denial-of-Service Vulnerabilities in Java Web Containers. </div>
+                        <div class="author">Keke Lian, Lei Zhang, Haoran Zhao, Yinzhi Cao, Yongheng Liu, Fute Sun, Yuan Zhang, Min Yang. </div>
+                        <div class="venue">In Proceedings of the 34th USENIX Security Symposium (USENIX Security), Seattle, WA, USA, August 13-15, 2025
+                            (to appear).
+                        </div>
+                    </li>
+                    <li class="pub 2025">
+                        <div class="title">ChainFuzz: Exploiting Upstream Vulnerabilities in Open-Source Supply Chains. </div>
+                        <div class="author">Peng Deng, Lei Zhang, Yuchuan Meng, Zhemin Yang, Yuan Zhang, Min Yang. </div>
+                        <div class="venue">In Proceedings of the 34th USENIX Security Symposium (USENIX Security), Seattle, WA, USA, August 13-15, 2025
+                            (to appear).
+                        </div>
+                    </li>
+                    <li class="pub 2025">
                         <div class="title">MOCGuard: Automatically Detecting Missing-Owner-Check Vulnerabilities in Java Web Applications. </div>
                         <div class="author">Fengyu Liu, Youkun Shi, Yuan Zhang, Guangliang Yang, Enhao Li, Min Yang. </div>
                         <div class="venue">In Proceedings of the 46th IEEE Symposium on Security and Privacy (S&P), San Francisco, CA, USA, May 12-15, 2025
                             <a href="./paper/mocguard-oakland25.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2025">
                         <div class="title">EPScan: Automated Detection of Excessive RBAC Permissions in Kubernetes Applications. </div>
                         <div class="author">Yue Gu, Xin Tan, Yuan Zhang, Siyan Gao, Min Yang. </div>
                         <div class="venue">In Proceedings of the 46th IEEE Symposium on Security and Privacy (S&P), San Francisco, CA, USA, May 12-15, 2025
                             <a href="./paper/epscan-oakland25.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2025">
+                        <div class="title">You Can't Eat Your Cake and Have It Too: The Performance Degradation of LLMs with Jailbreak Defense. </div>
+                        <div class="author">Wuyuao Mai, Geng Hong, Pei Chen, Xudong Pan, Baojun Liu, Yuan Zhang, Haixin Duan, Min Yang. </div>
+                        <div class="venue">In Proceedings of the 34th ACM Web Conference (WWW), Sydney, Australia, April 28-May 2, 2025
+                            (to appear).
+                        </div>
+                    </li>
+                    <li class="pub 2025">
                         <div class="title">Misdirection of Trust: Demystifying the Abuse of Dedicated URL Shortening Service. </div>
                         <div class="author">Zhibo Zhang, Lei Zhang, Zhangyue Zhang, Geng Hong, Yuan Zhang, Min Yang. </div>
                         <div class="venue">In Proceedings of the 32nd Network and Distributed System Security Symposium (NDSS), San Diego, CA, USA, Feb 23-28, 2025
                             <a href="./paper/DUSS-ndss25.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2024">
                         <div class="title">Accurate and Efficient Recurring Vulnerability Detection for IoT Firmware. </div>
                         <div class="author">Haoyu Xiao, Yuan Zhang, Minghang Shen, Chaoyang Lin, Can Zhang, Shengli Liu, Min Yang. </div>
                         <div class="venue">In Proceedings of the 31st ACM Conference on Computer and Communications Security (CCS), Salt Lake City, USA, October 14-18, 2024. 
@@ -443,98 +517,98 @@
                             <a href="./paper/firmrec-ccs24.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2024">
                         <div class="title">Applying Fuzz Driver Generation to Native C/C++ Libraries of OEM Android Framework: Obstacles and Solutions. </div>
                         <div class="author">Shiyan Peng, Yuan Zhang, Jiarun Dai, Yue Gu, Zhuoxiang Shen, Jingcheng Liu, Lin Wang, Yong Chen, Yu Qin, Lei Ai, Xianfeng Lu, Min Yang. </div>
                         <div class="venue">In Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering (ASE Industry Track), Sacramento, CA, USA, Oct 27-Nov 1, 2024
                             <a href="./paper/fuzzgen++-ase24industry.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2024">
                         <div class="title">New PHP Language Features Make Your Static Code Analysis Tools Miss Vulnerabilities. </div>
                         <div class="author">Lin Wang, Yuan Zhang, Xin Tan, Shengke Ye and Min Yang. </div>
                         <div class="venue">In Proceedings of 40th International Conference on Software Maintenance and Evolution (ICSME), Flagstaff, AZ, USA, October 6-11, 2024 
                             <a href="./paper/PHPLangFeature-icsme24.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2024">
                         <div class="title">VioHawk: Detecting Traffic Violations of Autonomous Driving  Systems through Criticality-guided Simulation Testing. </div>
                         <div class="author">Zhongrui Li, Jiarun Dai, Zongan Huang, Nianhao You, Yuan Zhang, Min Yang. </div>
                         <div class="venue">In Proceedings of ACM SIGSOFT International Symposium on Software Testing and Analysis (ISSTA), Vienna, Austria, September 16-20, 2024. 
                             <a href="./paper/VioHawk-issta24.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2024">
                         <div class="title">Component Security Ten Years Later: An Empirical Study of Cross-Layer Threats in Real-World Mobile Applications.</div>
                         <div class="author">Keke Lian, Lei Zhang, Guangliang Yang, Shuo Mao, Xinjie Wang, Yuan Zhang, Min Yang.</div>
                         <div class="venue">In Proceedings of ACM International Conference on the Foundations of Software Engineering (FSE), Brazil, Brazil, July 15-19, 2024. <b class="award">[ACM SIGSOFT Distinguished Paper Award]</b>
                             <a href="./paper/cldroid-fse24.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2024">
                         <div class="title">How Well Industry-Level Cause Bisection Works in Real-World: A Study on Linux Kernel.</div>
                         <div class="author">Kangzheng Gu, Yuan Zhang, Jiajun Cao, Xin Tan, Min Yang.</div>
                         <div class="venue">In Proceedings of ACM International Conference on the Foundations of Software Engineering (FSE) Industry Track, Brazil, Brazil, July 15-19, 2024.
                             <a href="./paper/syzbotstudy-fsecomp24industry.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2024">
                         <div class="title">Efficient Detection of Java Deserialization Gadget Chains via Bottom-up Gadget Search and Dataflow-aided Payload Construction.</div>
                         <div class="author">Bofei Chen, Lei Zhang, Xinyou Huang, Yinzhi Cao, Keke Lian, Yuan Zhang, Min Yang.</div>
                         <div class="venue">In Proceedings of the 45th IEEE Symposium on Security and Privacy (S&P), San Francisco, CA, May 20-23, 2024.
                             <a href="./paper/jdd-oakland24.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2024">
                         <div class="title">SAMBA: Detecting SSL/TLS API Misuses in IoT Binary Applications.</div>
                         <div class="author">Kaizheng Liu, Ming Yang, Zhen Ling, Yuan Zhang, Chongqing Lei, Lan Luo, Xinwen Fu.</div>
                         <div class="venue">In Proceedings of 43rd IEEE International Conference on Computer Communications (INFOCOM), Vancouver, Canada, May 20-23, 2024.
                             <a href="./paper/samba-infocomm24.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2024">
                         <div class="title">RecurScan: Detecting Recurring Vulnerabilities in PHP Web Applications.</div>
                         <div class="author">Youkun Shi, Yuan Zhang, Tianhao Bai, Lei Zhang, Xin Tan, Min Yang.</div>
                         <div class="venue">In Proceedings of the 33rd ACM Web Conference (WWW), Singapore, May 13–17, 2024.
                             <a href="./paper/recurscan-www24.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2024">
                         <div class="title">Interface Illusions: Uncovering the Rise of Visual Scams in Cryptocurrency Wallets.</div>
                         <div class="author">Guoyi Ye, Geng Hong, Yuan Zhang, Min Yang.</div>
                         <div class="venue">In Proceedings of the 33rd ACM Web Conference (WWW), Singapore, May 13–17, 2024.
                             <a href="./paper/visualscam-www24.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2024">
                         <div class="title">SCTrans: Constructing a Large Public Scenario Dataset for Simulation Testing of Autonomous Driving Systems.</div>
                         <div class="author">Jiarun Dai, Bufan Gao, Mingyuan Luo, Zongan Huang, Zhongrui Li, Yuan Zhang, Min Yang.</div>
                         <div class="venue">In Proceedings of the 46th International Conference on Software Engineering (ICSE), Lisbon, Portugal, April 14-20, 2024.
                             <a href="./paper/sctrans-icse24.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2023">
                         <div class="title">SyzDirect: Directed Greybox Fuzzing for Linux Kernel.</div>
                         <div class="author">Xin Tan, Yuan Zhang, Jiadong Lu, Xin Xiong, Zhuang Liu, Min Yang.</div>
                         <div class="venue">In Proceedings of the 30th ACM Conference on Computer and Communications Security (CCS), Copenhagen, Denmark, November 26-30, 2023.
                             <a href="./paper/syzdirect-ccs23.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2023">
                         <div class="title">NestFuzz: Enhancing Fuzzing with Comprehensive Understanding of Input Processing Logic.</div>
                         <div class="author">Peng Deng, Zhemin Yang, Lei Zhang, Guangliang Yang, Wenzheng Hong, Yuan Zhang, Min Yang.</div>
                         <div class="venue">In Proceedings of the 30th ACM Conference on Computer and Communications Security (CCS), Copenhagen, Denmark, November 26-30, 2023.
                             <a href="./paper/nestfuzz-ccs23.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2023">
                         <div class="title">TrustedDomain Compromise Attack in App-in-app Ecosystems.</div>
                         <div class="author">Zhibo Zhang, Zhangyue Zhang, Keke Lian, Guangliang Yang, Lei Zhang, Yuan Zhang, Min Yang.</div>
                         <div class="venue">In Proceedings of the 1st ACM Workshop on Secure and Trustworthy Superapps (SaTS), co-located with ACM CCS, Copenhagen, Denmark, November 26, 2023.
                             <a href="./paper/TrustedDomain-sats23.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2023">
                         <div class="title">Remote Code Execution from SSTI in the Sandbox: Automatically Detecting and Exploiting Template Escape Bugs.</div>
                         <div class="author">Yudi Zhao, Yuan Zhang, Min Yang.</div>
                         <div class="venue">In Proceedings of the 32nd USENIX Security Symposium (USENIX Security), Anaheim, CA, USA, August 9-11, 2023.
@@ -545,159 +619,159 @@
                             
                         </div>
                     </li> 
-                    <li>
+                    <li class="pub 2023">
                         <div class="title">Understanding the (In)Security of Cross-side Face Verification Systems in Mobile Apps: A System Perspective.</div>
                         <div class="author">Xiaohan Zhang, Haoqi Ye, Ziqi Huang, Xiao Ye, Yinzhi Cao, Yuan Zhang, Min Yang.</div>
                         <div class="venue">In Proceedings of the 44th IEEE Symposium on Security and Privacy (S&P), San Francisco, CA, May 22-26, 2023.
                             <a href="./paper/xfvschecker-oakland23.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2023">
                         <div class="title">AEM: Facilitating Cross-Version Exploitability Assessment of Linux Kernel Vulnerabilities.</div>
                         <div class="author">Zheyue Jiang, Yuan Zhang, Jun Xu, Xinqian Sun, Zhuang Liu, Min Yang.</div>
                         <div class="venue">In Proceedings of the 44th IEEE Symposium on Security and Privacy (S&P), San Francisco, CA, May 22-26, 2023.
                             <a href="./paper/aem-oakland23.pdf">[Paper]</a>
                         </div>
                     </li> 
-                    <li>
+                    <li class="pub 2022">
                         <div class="title">Precise (Un)Affected Version Analysis for Web Vulnerabilities.</div>
                         <div class="author">Youkun Shi, Yuan Zhang, Tianhan Luo, Xiangyu Mao, Min Yang.</div>
                         <div class="venue">In Proceedings of the 37th IEEE/ACM International Conference on Automated Software Engineering (ASE), Ann Arbor, Michigan, United States, October 10-14, 2022.
                             <a href="./paper/afv-ase22.pdf">[Paper]</a>
                         </div>
                     </li> 
-                    <li>
+                    <li class="pub 2022">
                         <div class="title">Identity Confusion in WebView-based Mobile App-in-app Ecosystems.</div>
                         <div class="author">Lei Zhang, Zhibo Zhang, Ancong Liu, Yinzhi Cao, Xiaohan Zhang, Yanjun Chen, Yuan Zhang, Guangliang Yang, Min Yang.</div>
                         <div class="venue">In Proceedings of the 31st USENIX Security Symposium (USENIX Security), Boston, MA, USA, August 10-12, 2022. <b class="award">[Distinguished Paper Award]</b>
                             <a href="./paper/miniapp-identity-security22.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2022">
                         <div class="title">Backporting Security Patches of Web Applications: A Prototype Design and Implementation on Injection Vulnerability Patches.</div>
                         <div class="author">Youkun Shi, Yuan Zhang, Tianhan Luo, Xiangyu Mao, Yinzhi Cao, Ziwen Wang, Yudi Zhao, Zongan Huang, Min Yang.</div>
                         <div class="venue">In Proceedings of the 31st USENIX Security Symposium (USENIX Security), Boston, MA, USA, August 10-12, 2022.
                             <a href="./paper/skyport-security22.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2022">
                         <div class="title">Exploit The Last Straw that Breaks Android System.</div>
                         <div class="author">Lei Zhang, Keke Lian, Haoyu Xiao, Zhibo Zhang, Peng Liu, Yuan Zhang, Min Yang, Haixin Duan.</div>
                         <div class="venue">In Proceedings of the 43rd IEEE Symposium on Security and Privacy (S&P), San Francisco, CA, May 22-26, 2022.
                             <a href="./paper/strawfuzzer-oakland22.pdf">[Paper]</a>
                         </div>
                     </li>                      
-                    <li>
+                    <li class="pub 2022">
                         <div class="title">Understanding the Practice of Security Patch Management across Multiple Branches in OSS Projects.</div>
                         <div class="author">Xin Tan, Yuan Zhang, Jiajun Cao, Kun Sun, Mi Zhang, Min Yang.</div>
                         <div class="venue">In Proceedings of the 31st ACM Web Conference (WWW), Lyon, France, April 25–29, 2022.
                             <a href="./paper/patchstudy-www22.pdf">[Paper]</a>
                         </div>
                     </li> 
-                    <li>
+                    <li class="pub 2022">
                         <div class="title">Slowing Down the Aging of Learning-based Malware Detectors with API Knowledge.</div>
                         <div class="author">Xiaohan Zhang, Mi Zhang, Yuan Zhang, Ming Zhong, Xin Zhang, Yinzhi Cao, Min Yang.</div>
                         <div class="venue">In Transactions on Dependable and Secure Computing (TDSC), 2022.
                             <a href="https://ieeexplore.ieee.org/document/9693181">[Online]</a>
                         </div>
                     </li> 
-                    <li>
+                    <li class="pub 2022">
                         <div class="title">Refcount Field Identification for Linux Kernel Based on Deep Learning. </div>
                         <div class="author">Xin Tan, Xiyu Yang, Jiajun Cao, Yuan Zhang.</div>
                         <div class="venue">In the International Journal of Software & Informatics (IJSI). 2022, Vol. 12 Issue 3, p309-329.
                         </div>
                     </li> 
-                    <li>
+                    <li class="pub 2021">
                         <div class="title">Locating the Security Patches for Disclosed OSS Vulnerabilities with Vulnerability-Commit Correlation Ranking.</div>
                         <div class="author">Xin Tan, Yuan Zhang, Chenyuan Mi, Jiajun Cao, Kun Sun, Yifan Lin, Min Yang.</div>
                         <div class="venue">In Proceedings of the 28th ACM Conference on Computer and Communications Security (CCS), Seoul, South Korea, November 14-19, 2021.
                             <a href="./paper/patchscout-ccs21.pdf">[Paper]</a>
                         </div>
                     </li>                      
-                    <li>
+                    <li class="pub 2021">
                         <div class="title">Facilitating Vulnerability Assessment through PoC Migration.</div>
                         <div class="author">Jiarun Dai, Yuan Zhang, Hailong Xu, Haiming Lyu, Zicheng Wu, Xinyu Xing, Min Yang.</div>
                         <div class="venue">In Proceedings of the 28th ACM Conference on Computer and Communications Security (CCS), Seoul, South Korea, November 14-19, 2021.
                             <a href="./paper/vulscope-ccs21.pdf">[Paper]</a>
                         </div>
                     </li>    
-                    <li>
+                    <li class="pub 2021">
                         <div class="title">Detecting Kernel Refcount Bugs with Two-Dimensional Consistency Checking.</div>
                         <div class="author">Xin Tan, Yuan Zhang, Xiyu Yang, Kangjie Lu, Min Yang.</div>
                         <div class="venue">In Proceedings of the 30th USENIX Security Symposium (USENIX Security), Vancouver, Canada, August 11-13, 2021.
                             <a href="./paper/cid-security21.pdf">[Paper]</a>
                         </div>
                     </li>   
-                    <li>
+                    <li class="pub 2020">
                         <div class="title">Enhancing State-of-the-art Classifiers with API Semantics to Detect Evolved Android Malware.</div>
                         <div class="author">Xiaohan Zhang, Yuan Zhang, Ming Zhong, Daizong Ding, Yinzhi Cao, Yukun Zhang, Mi Zhang, Min Yang.</div>
                         <div class="venue">In Proceedings of the 27th ACM Conference on Computer and Communications Security (CCS), Orlando, USA, November 9-13, 2020. <b class="award">[Distinguished Paper Award Nomination]</b>
                             <a href="./paper/apigraph-ccs20.pdf">[Paper]</a>
                         </div>
                     </li>               
-                    <li>
+                    <li class="pub 2020">
                         <div class="title">PDiff: Semantic-based Patch Presence Testing for Downstream Kernels.</div>
                         <div class="author">Zheyue Jiang, Yuan Zhang, Jun Xu, Qi Wen, Zhenghe Wang, Xiaohan Zhang, Xinyu Xing, Min Yang, Zhemin Yang.</div>
                         <div class="venue">In Proceedings of the 27th ACM Conference on Computer and Communications Security (CCS), Orlando, USA, November 9-13, 2020.
                             <a href="./paper/pdiff-ccs20.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2020">
                         <div class="title">BScout: Direct Whole Patch Presence Test for Java Executables.</div>
                         <div class="author">Jiarun Dai, Yuan Zhang, Zheyue Jiang, Yingtian Zhou, Junyan Chen, Xinyu Xing, Xiaohan Zhang, Xin Tan, Min Yang, Zhemin Yang.</div>
                         <div class="venue">In Proceedings of the 29th USENIX Security Symposium (USENIX Security), Boston, MA, USA, August 12-14, 2020.
                             <a href="./paper/bscout-security20.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2020">
                         <div class="title">An Ever-evolving Game: Evaluation of Real-world Attacks and Defenses in Ethereum Ecosystem.</div>
                         <div class="author">Shunfan Zhou, Zhemin Yang, Jie Xiang, Yinzhi Cao, Min Yang, Yuan Zhang.</div>
                         <div class="venue">In Proceedings of the 29th USENIX Security Symposium (USENIX Security), Boston, MA, USA, August 12-14, 2020.
                             <a href="./paper/smart-contract-security20.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2020">
                         <div class="title">How Android Developers Handle Evolution-induced API Compatibility Issues: A Large-scale Study.</div>
                         <div class="author">Hao Xia, Yuan Zhang, Yingtian Zhou, Xiaoting Chen, Yang Wang, Xiangyu Zhang, Shuaishuai Cui, Gen Hong, Xiaohan Zhang, Min Yang, Zhemin Yang.</div>
                         <div class="venue">In Proceedings of the 42nd International Conference on Software Engineering (ICSE), Seoul, South Korea, May 23-29, 2020.
                             <a href="./paper/rapid-icse20.pdf">[Paper]</a>
                         </div>
                     </li> 
-                    <li>
+                    <li class="pub 2020">
                         <div class="title">TextExerciser: Feedback-driven Text Input Exercising for Android Applications.</div>
                         <div class="author">Yuyu He, Lei Zhang, Zhemin Yang, Yinzhi Cao, Keke Lian, Shuai Li, Wei Yang, Zhibo Zhang, Min Yang, Yuan Zhang, Haixin Duan.</div>
                         <div class="venue">In Proceedings of the 41st IEEE Symposium on Security and Privacy (S&P), San Francisco, CA, May 18-20, 2020.
                             <a href="./paper/te-oakland20.pdf">[Paper]</a>
                         </div>
                     </li>  
-                    <li>
+                    <li class="pub 2020">
                         <div class="title">Hybrid Malware Detection Approach with Feedback-directed Machine Learning.</div>
                         <div class="author">Zhetao Li, Wenlin Li, Fuyuan Lin, Yi Sun, Min Yang, Yuan Zhang, Zhibo Wang.</div>
                         <div class="venue">In SCIENCE CHINA Information Sciences, Volume 63, Issue 3: 139103 (2020)
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2019">
                         <div class="title">App in the Middle : Demystify Application Virtualization in Android and its Security Threats to over 100 Million Users.</div>
                         <div class="author">Lei Zhang, Zhemin Yang, Yuyu He, Mingqi Li, Sen Yang, Min Yang, Yuan Zhang, Zhiun Qian.</div>
                         <div class="venue">In Proceedings of ACM SIGMETRICS / IFIP Performance, Phoenix, Arizona, USA, 2019.
                                 <a href="./paper/app_virtualization_sigmetrics19.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2018">
                         <div class="title">How You Get Shot in the Back: A Systematical Study about Cryptojacking in the Real World.</div>
                         <div class="author">Geng Hong, Zhemin Yang, Sen Yang, Lei Zhang, Yuhong Nan, Zhibo Zhang, Min Yang, Yuan Zhang, Zhiyun Qian, Haixin Duan.</div>
                         <div class="venue">In Proceedings of the 25th ACM Conference on Computer and Communications Security (CCS), Toronto, Canada, October 15-19, 2018.
                                 <a href="./paper/cmtracker-ccs2018.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2018">
                         <div class="title">Invetter: Locating Insecure Input Validations in Android Services.</div>
                         <div class="author">Lei Zhang, Zhemin Yang, Yuyu He, Zhenyu Zhang, Zhiyun Qian, Geng Hong, Yuan Zhang, Min Yang.</div>
                         <div class="venue">In Proceedings of the 25th ACM Conference on Computer and Communications Security (CCS), Toronto, Canada, October 15-19, 2018.
                                 <a href="./paper/invetter-ccs2018.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2018">
                         <div class="title">An Empirical Study of Web Resource Manipulation in Real-world Mobile Applications.</div>
                         <div class="author">Xiaohan Zhang, Yuan Zhang, Qianqian Mo, Hao Xia, Zhemin Yang, Min Yang, Xiaofeng Wang, Long Lu, Haixin Duan.</div>
                         <div class="venue">In Proceedings of the 27th USENIX Security Symposium (USENIX Security), Baltimore, USA, August 15-17, 2018.
@@ -705,7 +779,7 @@
                             <a href="https://xhzhang.github.io/XPMChecker/">[Dataset]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2018">
                         <div class="title">Detecting Third-Party Libraries in Android Applications with High Precision and Recall.</div>
                         <div class="author">Yuan Zhang, Jiarun Dai, Xiaohan Zhang, Sirong Huang, Zhemin Yang, Min Yang, Hao Chen.</div>
                         <div class="venue">In Proceedings of IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER), Campobasso, Italy, March 20-23, 2018. 
@@ -713,63 +787,63 @@
 							<a href="https://github.com/yuanxzhang/LibPecker">[Source Code]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2018">
                         <div class="title">Finding Clues for Your Secrets: Semantics-Driven, Learning-Based Privacy Discovery in Mobile Apps.</div>
                         <div class="author">Yuhong Nan, Zhemin Yang, Xiaofeng Wang, Yuan Zhang, Donglai Zhu, Min Yang.</div>
                         <div class="venue">In Proceedings of Network and Distributed System Security Symposium (NDSS), San Diego, Feb 18-21, 2018.
                             <a href="./paper/cluefinder-ndss2018.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2017">
                         <div class="title">Identifying User-Input Privacy in Mobile Applications at a Large Scale.</div>
                         <div class="author">Yuhong Nan, Zhemin Yang, Min Yang, Shunfan Zhou, Yuan Zhang, Guofei Gu, Xiaofeng Wang, Limin Sun.</div>
                         <div class="venue">In IEEE Transactions on Information Forensics and Security (TIFS), 2017, 12(3), 647-661.
                             <a href="./paper/uipicker-tifs.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2016">
                         <div class="title">Rethinking Permission Enforcement Mechanism on Mobile Systems.</div>
                         <div class="author">Yuan Zhang, Min Yang, Guofei Gu, Hao Chen.</div>
                         <div class="venue">In IEEE Transactions on Information Forensics and Security (TIFS), 2016, 9(11), 1828-1842.
                             <a href="./paper/finedroid-tifs.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2015">
                         <div class="title">FineDroid: Enforcing Permissions with System-wide Application Execution Context.</div>
                         <div class="author">Yuan Zhang, Min Yang, Guofei Gu, Hao Chen.</div>
                         <div class="venue">In Proceedings of the 11th EAI International Conference on Security and Privacy in Communication Networks (SecureComm), Dallas, TX, October 26-29, 2015.
                             <a href="./paper/finedroid-securecomm2015.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2015">
                         <div class="title">AppCracker: Widespread Vulnerabilities in User and Session Authentication in Mobile Apps.</div>
                         <div class="author">Fangda Cai, Hao Chen, Yuanyi Wu, Yuan Zhang.</div>
                         <div class="venue">In Proceedings of 4th IEEE Mobile Security Technologies (MoST), co-located with IEEE S&P, San Jose, CA, May 21, 2015.
                             <a href="./paper/appcracker-most2015.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2014">
                         <div class="title">Permission Use Analysis for Vetting Undesirable Behaviors in Android Apps.</div>
                         <div class="author">Yuan Zhang, Min Yang, Zhemin Yang, Guofei Gu, Peng Ning, Binyu Zang.</div>
                         <div class="venue">In IEEE Transactions on Information Forensics and Security (TIFS), 2014, 9(11), 1828-1842.
                             <a href="./paper/vetdroid-tifs.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2013">
                         <div class="title">AppIntent: Analyzing Sensitive Data Transmission in Android for Privacy Leakage Detection.</div>
                         <div class="author">Zhemin Yang, Min Yang, Yuan Zhang, Guofei Gu, Peng Ning, X. Sean Wang.</div>
                         <div class="venue">In Proceedings of the 20th ACM Conference on Computer and Communications Security (CCS), Berlin, Germany, November 4-8, 2013.
                             <a href="./paper/appintent-ccs2013.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2013">
                         <div class="title">Vetting Undesirable Behaviors in Android Apps with Permission Use Analysis.</div>
                         <div class="author">Yuan Zhang, Min Yang, Bingquan Xu, Zhemin Yang, Guofei Gu, Peng Ning, X. Sean Wang, Binyu Zang.</div>
                         <div class="venue">In Proceedings of the 20th ACM Conference on Computer and Communications Security (CCS), Berlin, Germany, November 4-8, 2013.
                             <a href="./paper/vetdroid-ccs2013.pdf">[Paper]</a>
                         </div>
                     </li>
-                    <li>
+                    <li class="pub 2012">
                         <div class="title">Swift: A Register-based JIT Compiler for Embedded JVMs.</div>
                         <div class="author">Yuan Zhang, Min Yang, Bo Zhou, Zhemin Yang, Weihua Zhang, Binyu Zang.</div>
                         <div class="venue">In Proceedings of the 8th International Conference on Virtual Execution Environments (VEE), London, UK, March 3-4, 2012.
